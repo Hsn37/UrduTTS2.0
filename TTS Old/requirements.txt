@@ -1,0 +1,11 @@
+tqdm
+requests
+scipy
+falcon
+numpy
+Flask
+matplotlib
+inflect
+tensorflow
+librosa
+Unidecode
