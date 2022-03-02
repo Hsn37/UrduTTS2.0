@@ -15,6 +15,8 @@
 
 - Training command: 
 
+- Repo: https://github.com/Hsn37/UrduTTS2.0.git
+
 python examples/tacotron2/train_tacotron2.py \
   --train-dir ./dump_urdudataset/train/ \
   --dev-dir ./dump_urdudataset/valid/ \
