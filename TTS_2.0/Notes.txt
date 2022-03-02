@@ -1,0 +1,25 @@
+- For the main library: pip install TensorflowTTS
+
+- for use with cpu, run: pip uninstall tensorflow-gpu==2.6 && pip install tensorflow==2.6
+
+- install german transliterate (needed): pip install git+https://github.com/repodiac/german_transliterate
+
+- use this command if there is some error about metrics with same names: pip install keras==2.6.*
+
+- paste the "ljspeech(urdu).py" file in helpers in the folder folder: tensorflow-tts/preprocess
+
+- Two commands for preprocessing: (can adjust rootdir and outdir according to dataset location).
+	- tensorflow-tts-preprocess --rootdir ./urdudataset --outdir ./dump_urdudataset --config ./Helpers/preprocessorConfig.yaml --dataset ljspeech
+	- tensorflow-tts-normalize --rootdir ./dump_urdudataset --outdir ./dump_urdudataset --config ./Helpers/preprocessorConfig.yaml --dataset ljspeech
+	
+
+- Training command: 
+
+python examples/tacotron2/train_tacotron2.py \
+  --train-dir ./dump_urdudataset/train/ \
+  --dev-dir ./dump_urdudataset/valid/ \
+  --outdir ./examples/tacotron2/exp/train.tacotron2.v1/ \
+  --config ./examples/tacotron2/conf/tacotron2.v1.yaml \
+  --use-norm 1 \
+  --mixed_precision 0 \
+  --resume ""
