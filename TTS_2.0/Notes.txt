@@ -1,6 +1,6 @@
 - For the main library: pip install TensorflowTTS
 
-- for use with cpu, run: pip uninstall tensorflow-gpu==2.6 && pip install tensorflow==2.6
+- for google colab, run: pip uninstall tensorflow-gpu==2.6 && pip install tensorflow-gpu==2.4
 
 - install german transliterate (needed): pip install git+https://github.com/repodiac/german_transliterate
 
@@ -14,10 +14,10 @@
 	
 
 - Training command: 
-
 - Repo: https://github.com/Hsn37/UrduTTS2.0.git
 
-python examples/tacotron2/train_tacotron2.py \
+- Wont work without a gpu
+CUDA_VISIBLE_DEVICES=0 python examples/tacotron2/train_tacotron2.py \
   --train-dir ./dump_urdudataset/train/ \
   --dev-dir ./dump_urdudataset/valid/ \
   --outdir ./examples/tacotron2/exp/train.tacotron2.v1/ \
