@@ -1,3 +1,5 @@
+##### This is for TRAINING ####
+
 - For the main library: pip install TensorflowTTS
 
 - for google colab, run: pip uninstall tensorflow-gpu==2.6 && pip install tensorflow-gpu==2.4
@@ -25,3 +27,9 @@ CUDA_VISIBLE_DEVICES=0 python examples/tacotron2/train_tacotron2.py \
   --use-norm 1 \
   --mixed_precision 0 \
   --resume ""
+
+
+
+#### FOR SPEECH SYNTHESIS ####
+pip install h5py==2.10.0
+
