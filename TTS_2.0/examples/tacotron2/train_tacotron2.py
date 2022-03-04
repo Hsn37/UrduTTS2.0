@@ -32,7 +32,8 @@ import yaml
 from tqdm import tqdm
 
 import tensorflow_tts
-from examples.tacotron2.tacotron_dataset import CharactorMelDataset
+# from examples.tacotron2.tacotron_dataset import CharactorMelDataset
+from tacotron_dataset import CharactorMelDataset
 from tensorflow_tts.configs.tacotron2 import Tacotron2Config
 from tensorflow_tts.models import TFTacotron2
 from tensorflow_tts.optimizers import AdamWeightDecay, WarmUp
